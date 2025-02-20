@@ -1,5 +1,5 @@
 # Skill-Stack
-This is my first project.
+This is my first project. We are making a website where we can give info on how to learn software development
 <br>
 People working on this project:
 <br>
