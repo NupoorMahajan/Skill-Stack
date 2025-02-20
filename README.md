@@ -7,4 +7,4 @@ People working on this project:
 <br>
 2.Vedang Ramesh Doulatabad
 <br>
-3.Rakshit 
+3.Rakshit Kapoor 
