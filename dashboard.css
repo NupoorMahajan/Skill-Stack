@@ -1,29 +1,115 @@
+
 *{
-    margin: 0px;
-    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: border-box;
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-    border: border-box;
+    /* background-color: #ffffff; */
+    overflow: hidden;
+}
+
+.webpage{
+    display: flex;
+    height: 100vh;
+    /* padding:0.5rem; */
+}
+
+.main{
+    flex: 1;
+    /* border: 2px solid black; */
+    position: relative;
+    overflow: scroll;
+    /* margin-left: 0.5rem; */
+    height: 100vh;
+    border-radius: 1rem;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 82px;
+    display: inline-block;
+    background-color: #023047;
+    border: 1px solid black;
+}
+
+.sidebar .sidebarbody{
+    height: 100vh;
+    width: 82px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border-radius: 1rem; */
+}
+
+.sidebarbody div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebarbody a{
+    width: 55px;
+    height: 40px;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.7rem;
+    background-color: #023047;
+    border-radius: 25px;
+    transition: transform 0.2s linear, background-color 0.2s linear, box-shadow 0.2s linear;
+}
+.sidebarbody div p{
+    color: white;
+}
+
+.sidebarbody a i{
+    color: white;
+    opacity: 0.9;
+}
+
+.sidebarbody a:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    background-color: #1B998B;
+    box-shadow: 2px 2px 10px #0D1317;
+}
+
+.sidebarbody a:active{
+    background-color: #FF7F11;
+}
+
+.mode{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 160px;
 }
 
 .navbar {
-    display: flex;
-    position: fixed;
-    left: 80px; /* Start after the sidebar */
-    width: calc(100% - 82px); /* Occupy remaining space */
+    position: fixed;  /* Make it stick to the top */
+    top: 0;
+    width: 100%;
     height: 80px;
     background-color: #FDFFFF;
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    /* border: 1px solid black; */
+    justify-content: space-around;
 }
 
 /*Logo*/
 
 .logo{
     height: 80px;
-    width: 250px;
+    width: 185px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -43,7 +129,7 @@
 
 .searchbar{
     display: flex;
-    width: 70%;    
+    width: 65%;    
     justify-content: flex-end;
 }
 
@@ -86,12 +172,15 @@
     width: 50px;
     justify-content: center;
     align-items: center;
+    margin-right: 75px;
 }
 
 .profile a{
     width: 40px;
     height: 40px;
-    text-align: center;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center;
     font-size: 28px;
     text-decoration: none;
     color: white;
@@ -110,79 +199,190 @@
     transform: scale(1.04);
 }
 
-/*Sidebar*/
-
-.sidebar {
-    height: 100vh;
-    width: 82px;
-    display: inline-block;
-    position: fixed;
-    background-color: #023047;
-    /* border: 1px solid black; */
-    left: 0; /* Ensures it is visible on the left */
-    top: 0; /*Aligns it at the top */
-    z-index: 1000;
-}
-
-.sidebar .sidebarbody{
-    height: 100vh;
-    width: 80px;
+.Welcome {
+    height: auto;  /* Allow it to expand as needed */
+    background-color: #f4f4f5;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-.sidebarbody div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.sidebarbody a{
-    width: 55px;
-    height: 40px;
+    padding: 48px 35px;
     text-align: center;
-    text-decoration: none;
-    font-size: 1.7rem;
-    background-color: #023047;
-    border-radius: 25px;
-    transition: transform 0.2s linear, background-color 0.2s linear, box-shadow 0.2s linear;
-}
-.sidebarbody div p{
-    color: white;
 }
 
-.sidebarbody a i{
-    color: white;
-    opacity: 0.9;
+.Welcome .heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 70px 0px 70px;
 }
 
-.sidebarbody a:hover{
-    opacity: 1;
-    transform: scale(1.05);
-    background-color: #1B998B;
-    box-shadow: 2px 2px 10px #0D1317;
+.heading h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 70.5px;
 }
 
-.sidebarbody a:active{
-    background-color: #FF7F11;
+.type1{
+    padding: 35px 35px 35px 35px;
 }
 
-.mode{
+.type1 h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro div{
+    width: 45%;
+}
+
+.text{
+    align-items: start;
+}
+
+.text p{
+    text-align: left;
+}
+
+.intro .image{
+    display: flex;
+    justify-content: center;
+}
+
+.image i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 200px;
+}
+
+.benefits{
+    padding: 128px 35px 128px 35px;
+    background-color: #f4f4f5;
+    height: auto;
+}
+
+.container1{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 25px;
+    column-gap: 25px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.para1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.para2{
+    font-size: 16px;
+}
+
+.logo1{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+
+.logo1 i{
+    width: 20%;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.benefits h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.benefits h3{
+    font-size: 24px;
+}
+
+.skill{
+    padding: 128px 35px 128px 35px;
+}
+
+.skill h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 25px;
+}
+
+.card2{
+    padding: 1rem;
+}
+
+.card2 ul{
+    padding-left: 0;
+}
+
+.card2 li{
+    list-style: none;
+    margin-bottom: 4px;
+}
+
+.card2 i{
+    margin-right: 4px;
+}
+
+.features{
+    padding: 128px 35px 128px 35px;
+    background-color: #f4f4f5;
+    height: auto;
+}
+
+.features h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.subfooter{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 160px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 100px 35px 100px 35px;
 }
 
-.container{
-    position: absolute;
-    top: 80px;
-    left: 82px;
-    width: calc(100% - 82px);
-    height: calc(100% - 80px);
-    background-color: blanchedalmond;
+.subfooter div h2{
+    font-size: 48px;
+    font-weight: bold;
 }
 
+.subfooter div p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.subfooter div button{
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    padding: 12px 6px;
+}
+
+.subfooter button i{
+    margin-left: 5px;
+}
