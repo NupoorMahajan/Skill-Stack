@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  localStorage.setItem("isLoggedIn", "true")
+  if (!localStorage.getItem("isLoggedIn")) {
+    localStorage.setItem("isLoggedIn", "true")
+  }
 
   const userNameElement = document.getElementById("userName")
   const userEmailElement = document.getElementById("userEmail")
