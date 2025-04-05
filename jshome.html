@@ -1,39 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Londrina+Sketch&family=Poppins&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <link rel="icon" type="png" href="Website Logo.png"> 
-    <link rel="stylesheet" href="jshome.css"> 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Londrina+Sketch&family=Poppins&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="icon" type="png" href="Website Logo.png">  
+    <link rel="stylesheet" href="jshome.css">  
     <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="profile.css">
     <script src="search.js" defer></script>
-    <title>SKILL STACK</title> 
-</head>
-<body>
-    <div class="webpage">
-        <div class="sidebar">
-            <h2>JS TUTORIAL</h2>
-            <ol>
-                <li><a href="jshome.html">JS HOME</a></li>
-                <li><a href="#">JS Introduction</a></li>
-                <li><a href="#">JS Where To</a></li>
-                <li><a href="#">JS Output</a></li>
-                <li><a href="#">JS Statements</a></li>
-                <li><a href="#">JS Syntax</a></li>
-                <li><a href="#">JS Comments</a></li>
-                <li><a href="#">JS Variables</a></li>
-                <li><a href="#">JS Let</a></li>
-                <li><a href="#">JS Const</a></li>
-                <li><a href="#">JS Operators</a></li>
-                <li><a href="#">JS Arithmetic</a></li>
-                <li><a href="#">JS Assignment</a></li>
-                <li><a href="#">JS Data Type</a></li>
-                <li><a href="#">JS Functions</a></li>
-                <li><a href="#">JS Objects</a></li>
+    <script src="profile.js" defer></script>
+    <title>SKILL STACK</title>  
+</head> 
+<body onload="checkLoginStatus()">
+    <div class="webpage"> 
+        <div class="sidebar"> 
+            <h2>JS TUTORIAL</h2> 
+            <ol> 
+                <li><a href="jshome.html">JS HOME</a></li> 
+                <li><a href="#">JS Introduction</a></li> 
+                <li><a href="#">JS Where To</a></li> 
+                <li><a href="#">JS Output</a></li> 
+                <li><a href="#">JS Statements</a></li> 
+                <li><a href="#">JS Syntax</a></li> 
+                <li><a href="#">JS Comments</a></li> 
+                <li><a href="#">JS Variables</a></li> 
+                <li><a href="#">JS Let</a></li> 
+                <li><a href="#">JS Const</a></li> 
+                <li><a href="#">JS Operators</a></li> 
+                <li><a href="#">JS Arithmetic</a></li> 
+                <li><a href="#">JS Assignment</a></li> 
+                <li><a href="#">JS Data Type</a></li> 
+                <li><a href="#">JS Functions</a></li> 
+                <li><a href="#">JS Objects</a></li> 
                 <li><a href="#">JS Object Properties</a></li>
                 <li><a href="#">JS Object Methods</a></li>
                 <li><a href="#">JS Object Display</a></li>
@@ -250,23 +252,45 @@
             </ol>
         </div>
         <div class="main">
-            <header>
-                <nav>
-                  <div class="navbar">
-                    <div class="logo">
-                      <img src="Website Logo.png" alt="Logo">
-                      <p>SKILL STACK</p>
-                    </div>
-                    <div class="searchbar">
-                      <input type="search" name="query" id="search" placeholder="SEARCH">
-                      <button type="submit" ><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
-                    <div class="profile">
-                      <a href="#" href="#"><i class="fa-solid fa-user"></i></a href="#">
-                    </div>
-                  </div>
-                </nav>
-            </header>
+            <header> 
+                <nav> 
+                  <div class="navbar"> 
+                    <div class="logo"> 
+                      <img src="Website Logo.png" alt="Logo"> 
+                      <p>SKILL STACK</p> 
+                    </div> 
+                    <div class="searchbar"> 
+                      <input type="search" name="query" id="search" placeholder="SEARCH"> 
+                      <button type="submit" ><i class="fa-solid fa-magnifying-glass"></i></button> 
+                    </div> 
+                    <div class="profile"> 
+                      <a href="#"><i class="fa-solid fa-user"></i></a>
+                      <div id="profileDropdown" class="profile-dropdown">
+                        <div class="profile-header">
+                          <div class="profile-image">
+                            <i class="fa-solid fa-user"></i>
+                          </div>
+                          <div class="profile-info">
+                            <h3 id="userName">User Name</h3>
+                            <p id="userEmail">user@example.com</p>
+                          </div>
+                        </div>
+                        <div class="profile-menu">
+                          <ul>
+                            <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Edit Profile</a></li>
+                            <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                            <li><a href="#"><i class="fa-solid fa-certificate"></i> Certificates</a></li>
+                            <li><a href="#"><i class="fa-solid fa-bookmark"></i> Tutorials</a></li>
+                          </ul>
+                        </div>
+                        <button id="logoutButton" class="logout-button">
+                          <i class="fa-solid fa-right-from-bracket"></i> Logout
+                        </button>
+                      </div>
+                    </div> 
+                  </div> 
+                </nav> 
+            </header> 
             <div class="htmltutorial">
                 <h1>JavaScript Tutorial</h1>
                 <div class="learnhtml">
